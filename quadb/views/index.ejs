@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <nav id="nav-bar">
+    <div id="logo">
+      <p class="bold"><span class="highlighted">HODLINFO</span>.com</p>
+      <p>
+        Powered by <span class="highlighted">Finestreet</span>
+      </p>
+    </div>
+    <div id="dropdown-btn">
+      <button id="dropdown">INR <i class="fad fa-caret-down"></i></button>
+      <button id="dropdown">BTC <i class="fad fa-caret-down"></i></button>
+    </div>
+      <div id="button">
+        <button id="round">58</button>
+        <button id="tel-button"><i class="fab fa-telegram-plane"></i>  Contact Telegram</button>
+      </div>
+  </nav>
+  
+    <div class="container">
+        <table>
+            <thead>
+              <tr id="row">
+                  <th>#</th>
+                <th>Name</th>
+                <th>Last</th>
+                <th>Buy / Sell price</th>
+                <th>Volume</th>
+                <th>Base_unit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <%for(let i in Result){%>  
+              <tr id="row">
+                <td><%= i %></td>
+                <td><%= Result[i].name %></td>
+                <td><%= Result[i].last %></td>
+                <td><%= Result[i].buy %> / <%= Result[i].sell %></td>
+                <td><%= Result[i].volume %></td>
+                <td><%= Result[i].base_unit %></td>
+               </tr>
+              <%}%>
+            </tbody>
+          </table>
+    </div>    
+</body>
+</html>
+

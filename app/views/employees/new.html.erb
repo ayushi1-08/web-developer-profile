@@ -1,0 +1,44 @@
+<h1>Create Employee</h1>
+
+<%= form_for @employee, url: employees_path do |f| %>
+  <div>
+    <%= f.label :employee_id %>
+    <%= f.text_field :employee_id %>
+  </div>
+
+  <div>
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div>
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div>
+    <%= f.fields_for :phone_numbers do |pn| %>
+      <%= pn.label :number, "Phone Number" %>
+      <%= pn.text_field :number %>
+    <% end %>
+  </div>
+
+  <div>
+    <%= f.label :doj %>
+    <%= f.date_field :doj %>
+  </div>
+
+  <div>
+    <%= f.label :salary %>
+    <%= f.number_field :salary %>
+  </div>
+
+  <div>
+    <%= f.submit "Create Employee" %>
+  </div>
+<% end %>

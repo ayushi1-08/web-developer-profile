@@ -1,0 +1,27 @@
+<h1>Employee List</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Employee ID</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Phone Numbers</th>
+      <th>DOJ</th>
+      <th>Salary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @employees.each do |employee| %>
+      <tr>
+        <td><%= employee.employee_id %></td>
+        <td><%= employee.first_name %></td>
+        <td><%= employee.last_name %></td>
+        <td><%= employee.email %></td>
+        <td><%= employee.phone_numbers %></td>
+        <td><%= employee.doj %></td>
+        <td><%= employee.salary %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
